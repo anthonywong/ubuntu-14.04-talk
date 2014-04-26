@@ -1,4 +1,6 @@
+/* 
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+*/
 /**
  * Default theme for reveal.js.
  *
@@ -153,6 +155,6 @@ body {
      -webkit-filter: blur(5px) brightness(50%);
 }
 
-.reveal li {
-    margin-bottom: 10px;
+.reveal li, .reveal ul, .reveal ol {
+    margin-top: 10px;
 }

@@ -195,6 +195,6 @@ ul, ol, div, p {
      -webkit-filter: blur(5px) brightness(50%);
 }
 
-.reveal li {
-    margin-bottom: 10px;
+.reveal ul, .reveal ol {
+    margin-top: 10px;
 }
