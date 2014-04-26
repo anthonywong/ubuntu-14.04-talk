@@ -188,3 +188,13 @@ ul, ol, div, p {
 .reveal small a {
 	font-size: 16pt !important;
 }
+
+/*********************************************/
+
+.reveal section .slide-background {
+     -webkit-filter: blur(5px) brightness(50%);
+}
+
+.reveal li {
+    margin-bottom: 10px;
+}

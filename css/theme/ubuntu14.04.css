@@ -46,9 +46,9 @@ body {
 .reveal h5,
 .reveal h6 {
   margin: 0 0 20px 0;
-  color: #eeeeee;
+  color: #dddddd;
   font-family: Ubuntu, "Droid Sans", sans-serif;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 0.9em;
   letter-spacing: 0.02em;
   text-shadow: 5px 5px 2px rgba(0, 0, 0, 0.5); }
@@ -151,7 +151,6 @@ body {
 
 .backgrounds .slide-background {
      -webkit-filter: blur(5px) brightness(50%);
-//     background-position: 380px -80px;
 }
 
 .reveal li {
