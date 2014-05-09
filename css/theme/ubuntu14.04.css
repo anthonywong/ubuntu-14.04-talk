@@ -158,3 +158,7 @@ body {
 .reveal li, .reveal ul, .reveal ol {
     margin-top: 10px;
 }
+
+.reveal .hi {
+    color: #ff6a00;
+}
