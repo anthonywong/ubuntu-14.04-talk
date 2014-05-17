@@ -1,0 +1,702 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Ubuntu 14.04</title>
+
+		<meta name="description" content="Ubuntu 14.04 Talk">
+		<meta name="author" content="Anthony Wong">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/ubuntu14.04.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+				<section data-background="images/ubuntu-14.04-mascot.png">
+					<h2 style="margin-top:100px"><b>Ubuntu &</b></h2>
+					<h2><b>Ubuntu Kylin 14.04 LTS</b></h2>
+					<h3>Trusty Tahr</h3>
+                    <br>
+					<p>
+						<small>by <a href="http://www.anthonywong.net">Anthony Wong 黃彥邦</a> / <a href="http://twitter.com/ypwong">@ypwong</a></small>
+                        <br>
+                        <small>@ 長沙 中南大學</small>
+					</p>
+				</section>
+
+				<section data-background="images/myself.jpg">
+                    <section data-background="images/myself.jpg">
+                        <h2>About me</h2>
+                        <p>
+                            <small><a>http://www.anthonywong.net</a></small>
+                        </p>
+                        <ul>
+                            <li>First linux experience is Redhat 4.2</li>
+                            <li>Accepted as Debian Developer in 1999
+                                <ul>
+                                    <li>Now maintaining a few packages in Debian and Ubuntu</li>
+                                    <li>Fix bugs from time to time</li>
+                                </ul>
+                            </li>
+                            <li>Worked at Sun Wah Linux</li>
+                            <li>Worked at Novell (SUSE)</li>
+                            <li>Currently working at Canonical
+                                <ul>
+                                    <li>Hardware Enablement of OEM PC</li>
+                                    <li>Ubuntu Kylin</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <aside class="notes">
+                        ...
+                        </aside>
+                    </section>
+                    <section data-transition="fade" data-background="images/myself.jpg">
+                        <img class="stretch" src="images/notebook_with_ubuntu_label.jpg"/>
+                    </section>
+                    <section data-transition="fade" data-background="images/myself.jpg">
+                        <img class="stretch" src="images/ubuntu_thinkpad.jpg"/>
+                    </section>
+                    <section data-transition="fade" data-background="images/myself.jpg">
+                        <img class="stretch" src="images/ubuntu_dell_and_hp.png"/>
+                    </section>
+                </section>
+
+
+				<section data-background="images/ubuntu-14.04-mascot.png">
+					<section>
+						<h2>Ubuntu</h2>
+                        <h3>(/ʊˈbʊntuː/ uu-buun-too)</h3>
+						<p>
+                        "humanity towards others"
+						</p>
+                        <img class="stretch" src="images/ubuntu_CDs.jpg">
+					</section>
+					<section>
+                        <ul>
+                        <li>Started as a secret project in <span class="hi">Mark Shuttleworth</span>'s flat in London in April 2004, using <code>no-name-yet.com</code></li>
+						<li>Based on <span class="hi">Debian GNU/Linux</span></li>
+						<li>First release 4.10 Warty Warthog</li>
+                        </ul>
+                        <br>
+                        <br>
+                        <small><a href="http://ubuntu.hu/node/2433">http://ubuntu.hu/node/2433</a></small>
+					</section>
+					<section>
+                        <table style="margin:0 auto;text-align:center;font-size:18px;" border="0" cellspacing="0" cellpadding="0" width="80%">
+                        <tbody>
+                        <tr>
+                        <th width="40%">开发代号</th>
+                        <th width="40%">中文释义</th>
+                        <th width="20%">发布版本</th>
+                        </tr>
+                        <tr>
+                        <td>Warty Warthog</td>
+                        <td>多疣的疣猪</td>
+                        <td>4.10</td>
+                        </tr>
+                        <tr>
+                        <td>Hoary Hedgehog</td>
+                        <td>灰白的刺猬</td>
+                        <td>5.04</td>
+                        </tr>
+                        <tr>
+                        <td>Breezy Badger</td>
+                        <td>活泼的小獾</td>
+                        <td>5.10</td>
+                        </tr>
+                        <tr>
+                        <td>Dapper Drake</td>
+                        <td>帅气的鸭子</td>
+                        <td>6.06 LTS</td>
+                        </tr>
+                        <tr>
+                        <td>Edgy Eft</td>
+                        <td>急躁的蜥蜴</td>
+                        <td>6.10</td>
+                        </tr>
+                        <tr>
+                        <td>Feisty Fawn</td>
+                        <td>好动的小鹿</td>
+                        <td>7.04</td>
+                        </tr>
+                        <tr>
+                        <td>Gutsy Gibbon</td>
+                        <td>贪吃的长臂猿</td>
+                        <td>7.10</td>
+                        </tr>
+                        <tr>
+                        <td>Hardy Heron</td>
+                        <td>胆大的苍鹭</td>
+                        <td>8.04 LTS</td>
+                        </tr>
+                        <tr>
+                        <td>Intrepid Ibex</td>
+                        <td>无畏的山羊</td>
+                        <td>8.10</td>
+                        </tr>
+                        <tr>
+                        <td>Jaunty Jackalope</td>
+                        <td>快活的怀俄明野兔</td>
+                        <td>9.04</td>
+                        </tr>
+                        <tr>
+                        <td>Karmic Koala</td>
+                        <td>命运无尾熊</td>
+                        <td>9.10</td>
+                        </tr>
+                        <tr>
+                        <td></td>
+                        <td>.</td>
+                        <td></td>
+                        </tr>
+                        <tr>
+                        <td></td>
+                        <td>.</td>
+                        <td></td>
+                        </tr>
+                        <tr>
+                        <td></td>
+                        <td>.</td>
+                        <td></td>
+                        </tr>
+                        </tbody>
+                        </table>
+					</section>
+                    <section data-background="images/ubuntu-14.04-mascot.png">
+                        <h2>Key points</h2>
+                        <ul>
+                            <li>Completely <i class="hi">Free Software</i> on CD/DVD images</li>
+                            <li><span class="hi">LTS</span> (long-term support) for every 2 years</li>
+                            <li>LTS with <span class="hi">5</span> years support</li>
+                            <li>9 months support for non-LTS releases</li>
+                            <li>Architectures: x86, amd64, ARM64, IBM Power, Intel Avoton</li>
+                            <li>Editions: Desktop, Server, Cloud server, Phone, Tablet</li>
+                            <li>Flavors: Kubuntu, Lubuntu, Xubuntu, Edubuntu, Ubuntu GNOME, Ubuntu Studio, Mythbuntu, Ubuntu Kylin</li>
+                        </ul>
+                    </section>
+
+					<section data-transition="none">
+                        <img class="stretch" src="images/releases/ubuntu_4.10.png">
+                        <p>4.10, first release, free shipping</p>
+					</section>
+                    <!--
+					<section data-transition="none">
+                        <img width="800" src="images/releases/ubuntu_5.04.png">
+                        <p>5.04, UTF-8 as default</p>
+					</section>
+					<section data-transition="none">
+                        <img width="800" src="images/releases/ubuntu_5.10.png">
+                        <p>5.10, graphical boot loader, OEM support, Launchpad</p>
+					</section>
+					<section data-transition="none">
+                        <img width="800" src="images/releases/ubuntu_6.06.png">
+                        <p>6.06 LTS, new Humanlooks theme, Live and install CD as one</p>
+					</section>
+					<section data-transition="none">
+                        <img width="800" src="images/releases/ubuntu_6.10.png">
+                        <p>6.10, upstart, apport</p>
+					</section>
+					<section data-transition="none">
+                        <img width="800" src="images/releases/ubuntu_7.04.png">
+                        <p>7.04</p>
+					</section>
+					<section data-transition="none">
+                        <img width="800" src="images/releases/ubuntu_7.10.png">
+                        <p>7.10, AppArmor, fast user switching</p>
+					</section>
+					<section data-transition="none">
+                        <img width="800" src="images/releases/ubuntu_8.04.png">
+                        <p>8.04 LTS, Wubi, Ubuntu Netbook Remix</p>
+					</section>
+					<section data-transition="none">
+                        <img width="800" src="images/releases/ubuntu_8.10.png">
+                        <p>8.10, DKMS</p>
+					</section>
+					<section data-transition="none">
+                        <img width="800" src="images/releases/ubuntu_9.04.png">
+                        <p>9.04, Notify OSD</p>
+					</section>
+                    -->
+					<section data-transition="none">
+                        <img class="stretch" src="images/releases/ubuntu_9.10.png">
+                        <p>9.10, Ubuntu software center, Eucalyptus, Empathy, ext4, Ubuntu One</p>
+					</section>
+					<section data-transition="none">
+                        <img class="stretch" src="images/releases/ubuntu_10.04.png">
+                        <p>10.04 LTS, new purple theme, Plymouth</p>
+					</section>
+                    <!--
+					<section data-transition="none">
+                        <img width="800" src="images/releases/ubuntu_10.10.png">
+                        <p>10.10, Ubuntu font</p>
+					</section>
+                    -->
+					<section data-transition="none">
+                        <img class="stretch" src="images/releases/ubuntu_11.04.png">
+                        <p>11.04, Unity, OpenStack preview</p>
+					</section>
+                    <!--
+					<section data-transition="none">
+                        <img width="800" src="images/releases/ubuntu_11.10.png">
+                        <p>11.10</p>
+					</section>
+					<section data-transition="none">
+                        <img width="800" src="images/releases/ubuntu_12.04.png">
+                        <p>12.04 LTS - 5 years of support, HUD, ARMv7</p>
+					</section>
+					<section data-transition="none">
+                        <img width="800" src="images/releases/ubuntu_12.10.png">
+                        <p>12.10</p>
+					</section>
+                    -->
+					<section data-transition="none">
+                        <img class="stretch" src="images/releases/ubuntu_13.04.png">
+                        <p>13.04, Unity 8 preview</p>
+					</section>
+                    <!--
+					<section data-transition="none">
+                        <img width="800" src="images/releases/ubuntu_13.10.png">
+                        <p>13.10</p>
+					</section>
+                    -->
+					<section data-transition="none">
+                        <img class="stretch" src="images/releases/ubuntu_14.04.png">
+                        <p>14.04</p>
+					</section>
+					<section data-transition="none">
+                        <img class="stretcH" src="images/Asus_Eee_701_ubuntu_netbook_remix.jpg">
+                        <p>Ubuntu Netbook Remix</p>
+					</section>
+					<aside class="notes">
+                    history:
+                    http://linuxfx.sdf.org/ubuntu.html
+                    https://en.wikipedia.org/wiki/Ubuntu_(operating_system)
+                    https://en.wikipedia.org/wiki/Ubuntu_11.04
+
+					</aside>
+				</section>
+
+				<section data-background="images/ubuntu-14.04-mascot.png">
+                    <section data-background="images/ubuntu-14.04-mascot.png">
+                        <h2><b>What's New in 14.04?</b></h2>
+                        <img class="stretch" src="images/ubuntu_release_baby.jpg">
+                    </section>
+                    <section data-background="images/ubuntu-14.04-mascot.png">
+                        <ul>
+                            <li>Kernel 3.2 → 3.13</li>
+                            <ul>
+                                <li>supports ARM64 and Power, Intel Avoton</li>
+                                <li>Haswell (Shark Bay), Broadwell</li>
+                            </ul>
+                            <li>SSD <span class="hi">TRIM</span> enabled by defaultn as cron job</li>
+                            <li><span class="hi">Hybrid graphics</span> for notebooks with Intel+NVIDIA or Intel+AMD
+                                <ul>
+                                    <li>NVIDIA Optimus: <code>nvidia-prime</code> and <code>nvidia-*</code></li>
+                                    <li>AMD PowerXpress: <code>fglrx-pxpress</code> and <code>fglrx</code></li>
+                                </ul>
+                            </li>
+                            <li>Python 2.7.3 → 3.3 migration</li>
+                            <li>Oxide web engine based on Chromium</li>
+                            <li>Steam Linux client officially released</li>
+                            <li>Unity 8 and Mir are not default 😞</li>
+                            <li class="fragment">... but can be installed as preview 😅</li>
+                        </ul>
+                    </section>
+                    <section data-background="images/ubuntu-14.04-mascot.png">
+                        <h2 style="margin-top:00px"><b>What's New in Unity?</b></h2>
+                    </section>
+                    <section data-background="images/ubuntu-14.04-mascot.png">
+                        <h3>HiDPI Support</h3>
+                        <p style="margin-left:130px" align="left">Otherwise...</p>
+                        <ul>
+                            <img src="images/unityretina.jpg">
+                        </ul>
+                    </section>
+                    <section data-background="images/ubuntu-14.04-mascot.png">
+                        <h3>Local menu</h3>
+                        <img width="800" src="images/local_menu.gif">
+                    </section>
+                    <section data-background="images/ubuntu-14.04-mascot.png">
+                        <h3>Full menu is back for GNOME applications</h3>
+                        <img class="stretch" src="images/full_menu_is_back.jpg">
+                    </section>
+                    <section data-background="images/ubuntu-14.04-mascot.png">
+                        <h3>Old lock screen</h3>
+                        <img width="700" src="images/old_lock_screen.png">
+                    </section>
+                    <section data-transition="fade" data-background="images/ubuntu-14.04-mascot.png">
+                        <h3>New lock screen</h3>
+                        <img width="700" src="images/new_lock_screen.png">
+                    </section>
+                    <section data-background="images/ubuntu-14.04-mascot.png">
+                        <h3>Anti-aliased and Borderless Windows</h3>
+                        <p>
+                            GTK3 CSS-themed window decoration
+                            <img width="600" valign="center" src="images/antialiased_window.jpg">
+                        </p>
+                    </section>
+                    <section data-transition="fade" data-background="images/ubuntu-14.04-mascot.png">
+                        <h3>Anti-aliased and Borderless Windows</h3>
+                        <img class="stretch" src="images/Application-windows-with-borders-in-Ubuntu-13.10.png">
+                    </section>
+                    <section data-transition="fade" data-background="images/ubuntu-14.04-mascot.png">
+                        <h3>Anti-aliased and Borderless Windows</h3>
+                        <img class="stretch" src="images/Application-windows-without-borders-on-Ubuntu-14.04-LTS.png">
+                    </section>
+                    <section data-background="images/ubuntu-14.04-mascot.png">
+                        <h3>App Spread with Filtering</h3>
+                        <img class="stretch" src="images/app_spread_with_filtering.png">
+                    </section>
+				</section>
+
+				<section data-background="images/image-phone-overview.jpg">
+                    <section data-background="images/image-phone-overview.jpg">
+                        <h2><b>Ubuntu Touch & SDK</b></h2>
+                        <br>
+                    </section>
+                    <section data-transition="fade" data-background="images/image-phone-overview.jpg">
+                        <h3>Ubuntu Edge</h3>
+                        <img class="stretch" src="images/32million_phone.png">
+                    </section>
+                    <section data-transition="fade" data-background="images/image-phone-overview.jpg">
+                        <h3>Ubuntu Edge</h3>
+                        <br>
+                        <img style="float:right; width:450px" src="images/ubuntu_edge.png">
+                        <ul style="width: 450px">
+                            <li>Announced on 22 July 2013</li>
+                            <li>Crowdfunding at Indiegogo</li>
+                            <li>40,000 units</li>
+                            <li>Target: $32,000,000 in one month</li>
+                        </ul>
+                    </section>
+                    <section data-transition="fade" data-background="images/image-phone-overview.jpg">
+                        <h3>Ubuntu Edge</h3>
+                        <p>
+                        The result...
+                        </p>
+                        <img class="stretch" src="images/ubuntu_edge_chart.png">
+                    </section>
+                    <section data-background="images/image-phone-overview.jpg">
+                        <h3>What is Ubuntu Touch?</h3>
+                        <img style="float:right; width:300px" src="images/scope.png">
+                        <ul style="width: 600px">
+                            <li>Ubuntu</li>
+                            <li>New Unity 8, display server Mir, and UI framework (Qt/QML)</li>
+                            <li>New touch-oriented applications</li>
+                            <li>Converged experienced</li>
+                            <li>Completely open source</li>
+                            <li>Click packages with app store</li>
+                            <li>Image based update</li>
+                            <li>Scopes</li>
+                                <ul style="font-size:28px"><li><a href="http://developer.ubuntu.com/scopes">http://developer.ubuntu.com/scopes</a></li></ul>
+                            <li style="font-size:28px"><a href="http://developer.ubuntu.com/start/ubuntu-for-devices/installing-ubuntu-for-devices/">Install instructions</a> / <a href="https://wiki.ubuntu.com/Touch">Ubuntu touch wiki</a></li>
+                        </ul>
+                    </section>
+                    <section data-background="images/image-phone-overview.jpg">
+                        <ul>
+                        <li>Supported development devices:
+                            <ul>
+                                <li>Nexus 4 phone</li>
+                                <li>Nexus 7 (2013) tablet</li>
+                                <li>Nexus 10 tablet</li>
+                            </ul>
+                        </li>
+                        <li>2 Ubuntu phones will be released in 2014
+                            <ul>
+                                <li>Meizu (MX3)</li>
+                                <li>BQ (Aquaris)</li>
+                            </ul>
+                        </li>
+                        </ul>
+                    </section>
+                    <section data-background="images/image-phone-overview.jpg">
+                        <h3>Ubuntu Touch Stack</h3>
+                        <img style="stretch; background: #ccc" src="images/Mir-Android_driver_stack.png">
+                    </section>
+                    <section data-background="images/image-phone-overview.jpg">
+                        <h3>Unity 7 vs Unity 8</h3>
+                        <p>
+                        <ul>
+                            <li>Nux vs QML</li>
+                            <li>compiz/Xorg vs Mir </li>
+                                <ul><li><a href="http://unity.ubuntu.com/mir/">http://unity.ubuntu.com/mir/</a></li></ul>
+                            <li>Scopes: python vs C++</li>
+                            <li>Application isolation</li>
+                            <li>Application life-cycle</li>
+                        </ul>
+                        </p>
+                    </section>
+                    <section data-background="images/image-phone-overview.jpg">
+                        <h3>Ubuntu Touch apps on desktop</h3>
+                        <img class="stretch" src="images/running_unity8_apps.png"/>
+                    </section>
+                    <section data-background="images/image-phone-overview.jpg">
+                        <h3>To run Unity 8 and Touch apps on desktop</h3>
+					<pre style="width:100%"><code data-trim contenteditable>
+$ sudo apt-get install unity8-desktop-session-mir
+
+$ sudo apt-get install address-book-app webbrowser-app camera-app \
+     friends-app gallery-app notes-app share-app 
+
+$ sudo apt-add-repository ppa:ubuntu-touch-coreapps-drivers/daily
+$ sudo apt-get update
+$ sudo apt-get install calendar-app dropping-letters music-app rssreader-app \
+     sudoku-app ubuntu-calculator-app ubuntu-clock-app ubuntu-filemanager-app \ 
+          ubuntu-terminal-app ubuntu-weather-app reminders-app
+					</code></pre>
+                    </section>
+
+                    <section data-background="images/ubuntu-14.04-mascot.png">
+                        <h3>Ubuntu SDK</h3>
+                        <img style="float:right; width:600px" src="images/sdk_in_action.png">
+                        <ul style="width:300px; font-size:28px">
+                            <li>Provides platform API</li>
+                            <li>Ubuntu components UI Toolkit</li>
+                            <li>QtCreator-based SDK</li>
+                            <li>Full Cordova support</li>
+                            <li>Click packaging tools</li>
+                            <li>App store integration</li>
+                            <li><a href="http://developer.ubuntu.com/">http://developer.ubuntu.com/</a></li>
+                        </ul>
+                        <pre><code data-trim contenteditable>
+$ sudo apt-get install ubuntu-sdk
+                        </code></pre>
+                    </section>
+                </section>
+
+
+				<section data-background="images/ubuntu_kylin_logo_large.png">
+                    <section data-background="images/ubuntu_kylin_logo_large.png">
+                        <h2><b>Ubuntu Kylin</b></h2>
+                        <br>
+                        <h3>优麒麟</h3>
+                    </section>
+                    <section data-background="images/ubuntu_kylin_logo_large.png">
+                        <h2><b>Ubuntu Kylin</b></h2>
+                        <ul>
+                            <li>官方认可衍生版 (flavour)
+                                <ul>
+                                    <li>CD/DVD 镜像里的所有软件必须开源</li>
+                                    <li>遵循 Ubuntu 社区规则</li>
+                                </ul>
+                            </li>
+                            <li>CCN 联合开发
+                                <ul>
+                                    <li>工业和信息化部软件与集成电路促进中心 (CSIP)</li>
+                                    <li>Canonical</li>
+                                    <li>国防科大 (NUDT)</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section data-background="images/ubuntu_kylin_logo_large.png">
+                        <h3>害怕这样? 😱</h3>
+                        <img class="stretch" src="images/after_installed_china_software.jpg">
+                    </section>
+
+                    <section data-background="images/ubuntu_kylin_logo_large.png">
+                        <h3>“自主知识产权”的？ 😱</h3>
+                        <blockquote style="width: 100%; font-size: 24px; color: #FAFF87; font-style:italic">
+                        <span style="font-size:38px">👍 </span> 4G发牌、玉兔上天，2013年最后一个月承载了国内高科技产业的辛苦与成功。但是与全球最优秀的科技成果相比，我们依旧是追赶者，依旧被国际寡头牵制 ...... <span style="font-size:38px">👍 </span>
+                        </blockquote>
+                        <img src="images/cos_hahaha.png">
+                        <!--
+                        <img style="position:absolute"  class="fragment" src="images/obama.jpg">
+                        -->
+                    </section>
+
+                    <section data-background="images/ubuntu_kylin_logo_large.png">
+                        <h3>http://launchpad.net/ubuntukylin</h3>
+                        <img class="stretch" src="images/UbuntuKylin-launchpad.png">
+                    </section>
+
+                    <section data-background="images/ubuntu_kylin_logo_large.png">
+                        <h3>回顾一下</h3>
+                        <ul>
+                            <li>已发布 13.04 及 13.10
+                                <ul>
+                                <li>开发了一些应用，农历日历、天气预报等</li>
+                                <li>音乐、视频、图片 scope 开发</li>
+                                <li>逐步跟软件应用企业沟通，例如金山</li>
+                                <li>壁纸比赛</li>
+                                <li>13.04 + 13.10 300万下载点击量</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    <section data-background="images/ubuntu_kylin_logo_large.png">
+                        <h3>14.04 LTS</h3>
+                        <ul>
+                            <li>14.04 LTS，５年长期支持</li>
+                            <li>一个月内已突破 100 万下载点击量</li>
+                            <li>将推出 HP 预装电脑</li>
+                        </ul>
+                    </section>
+
+                    <section data-background="images/ubuntu_kylin_logo_large.png">
+                    <h3>系统特征 —— 系统定制 (1/3)</h3>
+                    <ul>
+                        <li>中文化：专业的中文化工作</li>
+                            <ul>
+                                <li>与 Ubuntu Loco Team 社区携手合作，集中攻关40天，<span class="hi">对主要软件界面、软件中心描述以及系统帮助文档进行了全面中文化</span></li>
+                                <li>累计新增翻译5600余条、重新审核翻译56600余条、修正不合理的翻译300余条</li>
+                            </ul>
+                    </ul>
+                    </section>
+
+                    <section data-background="images/ubuntu_kylin_logo_large.png">
+                    <h3>系统特征 —— 系统定制 (2/3)</h3>
+                    <ul>
+                        <li>裁剪优化：针对 Ubuntu 进行裁剪定制，根据中文桌面用户的偏好需求，<span class="hi">增加特色软件，完善中文环境，精简无用的服务、软件和语言包</span></li>
+                            <ul>
+                                <li>基于 Firefox、Chromium、SMPlayer 等组建完整的中文软件环境</li>
+                                <li>默认使用小企鹅输入法，并支持拼音和五笔输入</li>
+                                <li>精简系统非中文语言包和非中文字体</li>
+                                <li>定制浏览器首页为搜狗导航</li>
+                            </ul>
+                    </ul>
+                    </section>
+
+                    <section data-background="images/ubuntu_kylin_logo_large.png">
+                    <h3>系统特征 —— 系统定制 (3/3)</h3>
+                    <ul>
+                        <li>自定义中文主题：专为中文用户定制的桌面主题，开机动画和壁纸大赛优秀作品，让用户体验到我们在细节上所做的努力</li>
+                    </ul>
+                    <img class="stretch" src="images/uk_nautilus.png">
+                    </section>
+
+                    <section data-background="images/ubuntu_kylin_logo_large.png">
+                    <h3>系统特征 —— 系统应用 (1/4)</h3>
+                    <ul>
+                        <li>WPS办公套件：国产文字处理工具，兼容微软Office文档格式，强大的图文排版功能、丰富的在线资源</li>
+                    </ul>
+                    <img class="stretch" src="images/wps.png">
+                    </section>
+
+                    <section data-background="images/ubuntu_kylin_logo_large.png">
+                    <h3>系统特征 —— 系统应用 (2/4)</h3>
+                    <ul>
+                        <li>搜狗输入法：Ubuntu Kylin 团队与搜狗公司联合倾力打造，基于小企鹅输入法框架，俱备与Windows、Mac版本一致的用户体验</li>
+                    </ul>
+                    <!--
+                    <img height="400px" src="images/sogou.png">
+                    -->
+                    <p><a href="http://pinyin.sogou.com/linux">http://pinyin.sogou.com/linux</a></p>
+                    <img height="150px" src="images/sogou_linux_logo.png">
+                    </section>
+
+                    <section data-background="images/ubuntu_kylin_logo_large.png">
+                    <h5>3个星期4个版本更新，太快了吧 😲</h5>
+                    <img class="stretch" src="images/sogou_changelog.png">
+                    </section>
+
+                    <section data-background="images/ubuntu_kylin_logo_large.png">
+                    <h3>系统特征 —— 系统应用 (3/4)</h3>
+                    <ul>
+                        <li>金山快盘：Ubuntu Kylin 团队与金山公司联合开发，具备文件同步、备份和共享功能，为用户的个人文件提供安全可控、跨平台的一站式管理体验</li>
+                    </ul>
+                    <img class="stretch" src="images/kingsoft_kuaipan.png">
+                    </section>
+
+                    <section data-background="images/ubuntu_kylin_logo_large.png">
+                    <h3>系统特征 —— 系统应用 (4/4)</h3>
+                    <ul>
+                        <li>优客助手：专为 Linux 小白打造的系统级管理与配置工具，具备强大的系统信息展示、一键垃圾清理、系统定制美化等功能</li>
+                    </ul>
+                    <img class="stretch" src="images/youker_assistant.png">
+                    </section>
+
+                    <section data-background="images/ubuntu_kylin_logo_large.png">
+                    <h3>Ubuntu Kylin 软件仓库</h3>
+                    <ul>
+                        <li>Ubuntu Kylin 软件中心尝鲜版，同时支持 Ubuntu 和 Ubuntu Kylin 软件仓库，便于快速安装 Ubuntu Kylin 团队合作推出的特色软件</li>
+                        <li>基于天河二号云平台建立 Ubuntu Kylin 软件仓库</li>
+                    </ul>
+                    <img class="stretch" src="images/uksc.png">
+                    </section>
+
+                    <section data-background="images/ubuntu_kylin_logo_large.png">
+                    <h3>致谢 🙇</h3>
+                    <ul>
+                        <li>感谢所有参与14.04版本过程的童鞋们：Ubuntu 和 Ubuntu Kylin开发人员、测试人员、美工和用户体验设计者、社区工作者、QQ群和IRC参与者、论坛参与者，Ubuntu Kylin 14.04的成功是成千上万人共同努力的结果！
+                        <li>代表 Ubuntu Kylin 开发团队感谢大家的爱护与支持，让我们一起努力，将中国开源操作系统事业做大做强！
+                    </ul>
+                    </section>
+				</section>
+
+				<section data-background="images/ubuntu-14.04-mascot.png">
+                    <section data-background="images/ubuntu-14.04-mascot.png">
+                        <h2 style="margin-top:200px">Thanks / Q&A 🙇</h2>
+                        <p style="margin-top:150px"><small>Get me at <a href="https://github.com/anthonywong/ubuntu-14.04-talk">https://github.com/anthonywong/ubuntu-14.04-talk</a></small></p>
+                    </section>
+                </section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+//					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+//					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
